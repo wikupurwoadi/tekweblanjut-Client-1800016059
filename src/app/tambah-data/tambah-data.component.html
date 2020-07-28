@@ -1,0 +1,22 @@
+    <h3 mat-dialog-title>Tambah Tamu</h3>
+    <div mat-dialog-content>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Nama</mat-label>
+        <input matInput [(ngModel)]="data.nama">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Alamat</mat-label>
+        <input matInput [(ngModel)]="data.alamat">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>No Telepon</mat-label>
+        <input matInput [(ngModel)]="data.no_telepon">
+    </mat-form-field>
+    </div>
+    <mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Batal</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="insert(data)">Simpan</button>
+    </mat-dialog-actions>
